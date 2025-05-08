@@ -30,7 +30,7 @@ Top-level:
   - Only `export` shows the before and after flags used with toolchain invocations -- `declare` does not!
   - Only `declare` yields an output with the same RUNPATH as the original -- with `export`, entries are missing!
 - think about creating `noRunpathAmbiguityHook` -- a runpath is considered "ambiguous" if it has multiple paths to the same library name
-  - This is a sign that the package is linking against the same library multiple times (different versions?), which might be a source of undefined behavior depending on the order paths are resolved
+  - This is a sign that the package is linking against the same library multiple times (different versions?), which might be a source of undefined behavior depending on the order paths are resolved.
 - `cuda_compat` should only be used when the host driver is not equal to the version of the CUDA package set currently being used.
   - Would detecting that would be impure?
 - Update `modules/cuda-capability-to-info.nix` for Jetson devices (i.e., Xavier and Orin on JetPack 5 max out at 12.2 with `cuda_compat`)
